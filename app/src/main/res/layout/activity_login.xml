@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3B68D1"
+    tools:context=".LoginActivity">
+
+    <WebView
+        android:id="@+id/wbvWeb"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtUrl" />
+
+    <EditText
+        android:id="@+id/edtUrl"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="URL"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnEnviar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="entrar"
+        app:layout_constraintBottom_toTopOf="@+id/btnAvancar"
+        app:layout_constraintEnd_toStartOf="@+id/btnRefresh"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtUrl"
+        app:layout_constraintVertical_bias="0.555" />
+
+    <Button
+        android:id="@+id/btnRefresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Refresh"
+        app:layout_constraintBottom_toTopOf="@+id/btnAvancar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnEnviar"
+        app:layout_constraintTop_toBottomOf="@+id/edtUrl" />
+
+    <Button
+        android:id="@+id/btnVoltar"
+        android:layout_width="89dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="VoltAR"
+        app:layout_constraintBottom_toTopOf="@+id/wbvWeb"
+        app:layout_constraintEnd_toStartOf="@+id/btnAvancar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnEnviar" />
+
+    <Button
+        android:id="@+id/btnAvancar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:text="Avançar"
+        app:layout_constraintBottom_toTopOf="@+id/wbvWeb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnVoltar"
+        app:layout_constraintTop_toBottomOf="@+id/btnRefresh" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
